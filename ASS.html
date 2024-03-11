@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="tites.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: black;
+    }
+    .p1 {
+      background-color: white;
+      color:darkred;
+      font-size: 25px;
+    }
+    #txt{background-color: tan; color: black; border-radius: 8px; }
+    #tio{background-color: tan;display: inline-block;}
+    #tio:hover{font-size: larger;transition: 0.5s; border-radius: 8px; padding: 7px 7px;}
+    #pot{position: relative;top: 106px;
+    left: 905px;}
+    
+  </style>
+  
+  <body>
+    
+    <div id="pot">
+      <p id="tio">Time:</p> <span id="txt"> </span>
+      <script>
+          window.onload = function() {getTime();}
+          function getTime() 
+          {
+      var today=new Date();
+      var h=today.getHours();
+      var m=today.getMinutes();
+      var s=today.getSeconds();
+      //add a zero in front of the numbers<10
+      m=checkTime(m);
+      s=checkTime(s);
+      document.getElementById("txt").innerHTML=h+":"+m+":"+s;
+      setTimeout(function(){getTime()},1000);
+          }
+          //setinterval ("get time()",1000);//another way
+          function checkTime(i)
+          {
+              if (i<10) {i="0" + i};  // add zero in front of numbers < 10
+              return i;
+          }
+      </script>
+      </div>
+        <nav>
+            <ul>
+                <li>
+                   
+                <img src="logo.png" alt="Nav Image" class="nav-image"> 
+        
+                       
+                    </li>
+                    <li><a href="Home Page.html">Home</a></li>
+                    <li><a href="shivain.html">Bracelets</a></li>
+                    <li><a href="ASS.html">Chains</a></li>
+                    <li><a href="css.html">About Us</a></li>
+                <li>
+                        <img src="cart.png" alt="Nav Image" class="nav-image2">
+                    </li> 
+            </ul>
+        </nav>
+    <header>
+      <center>
+        <p class="p1"><marquee> Free shipping all over India </marquee></p>
+      </center>
+    </header>
+
+    <h1 class="h10">Chains</h1>
+    <br />
+    <img class="br" src="0.webp" />
+    <br />
+    <br />
+    <h2 class="hoe2"><center>Current products</center></h2>
+    <br>
+
+    <div class="image-container">
+      <div>
+        <img class="left" src="1.jpg" />
+
+        <p class="p2">Angel pendant </p>
+        <h4 class="price"><s>169</s> now at <b> 69/- </b> only</h4>
+
+        <button class="but1">Add to Cart</button>
+      </div>
+
+      <div>
+        <img class="center" src="2.jpg" />
+        <p class="p2">Pearl pendant with name</p>
+        <h4 class="price"><s>599</s> now at <b> 299/- </b> only</h4>
+
+        <button class="but1">Add to Cart</button>
+      </div>
+      <div>
+        <img class="right" src="3.jpg" />
+        <p class="p2">Silver Charm pendant</p>
+        <h4 class="price"><s>588</s> now at <b>299/- </b> only</h4>
+
+        <button class="but1">Add to Cart</button>
+      </div>
+    </div>
+    <footer>
+        <div class="contact-section">
+            <h3>Contact Us</h3>
+            <p>Email: Sparkora@yourjewelrystore.com</p>
+            <p>Phone: +91 9836284281</p>
+        </div>
+
+        <div class="social-media-section">
+            <h3>Follow Us</h3>
+            <ul> 
+                
+                <li><a href="#" target="_blank">Facebook</a></li>
+                <li><a href="#" target="_blank">Twitter/X</a></li>
+                <li><a href="https://www.instagram.com/shivainnmaini/" target="_blank">Instagram</a></li>
+               
+            </ul>
+        </div>
+    </footer>
+                    
+  </body>
+</html>
